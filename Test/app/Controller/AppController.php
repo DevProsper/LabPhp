@@ -1,13 +1,20 @@
-<?php
+<?php 
+
 namespace App\Controller;
+use Core\Controller;
+
 /**
 * 
 */
-class AppController 
+class AppController extends Controller
 {
-	
-	function __construct()
-	{
-		echo "Je le Controller";
+	protected $template = 'default';
+
+	public function __construct(){
+		$this->viewPath = ROOT . '/Views/';
+	}
+
+	public function loadModel($model_name){
+		$this->model_name = App::getInstance()->getTable($model_name);
 	}
 }

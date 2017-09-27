@@ -6,6 +6,8 @@ require_once 'app/Autoloader.php';
 require_once 'Form.php';
 $form = Autoloader::register();
 
-$form1 = new Form();
-$form1
+$page = "users";
+$page = explode('.', $page);
+$controller = ucfirst("prosper") .'s' . 'Controller' . '.php';
+var_dump($controller);
 ?>
