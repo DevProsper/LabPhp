@@ -1,6 +1,11 @@
 <?php 
 
-$perPage = 10;
+if (isset($_GET['pp']) && !empty($_GET['pp']) && ctype_digit($_GET['pp']) == 1) {
+	$perPage = $_GET['pp'];
+}else{
+	$perPage = 4;
+}
+
 
 $req = $db->query('SELECT COUNT(*) AS total FROM produits');
 $resultats = $req->fetch();

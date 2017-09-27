@@ -15,10 +15,8 @@ if (isset($_POST['data'])) {
 
 <form action="index.php" method="post">
     <?= $form->input('email', 'Votre email', array('class' => 'bootstrap-form')); ?>
-    <?= $form->select('', '', array(
-      'class' => 'jfjfj',
-      'mmmm'  => 'hfhfh'
-    ));
-      ?>
+    <?= $form->file('email', 'Votre email' )?>
+    <?= $form->hidden('')?>
+    <?= $form->select('Choisissez', '', '')?>
     <input type="submit" name="" value="Soumettre">
 </form>

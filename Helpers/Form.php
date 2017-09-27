@@ -38,6 +38,7 @@ class Form{
     }
 
     function hidden($field, $value=''){
+        $r = "";
         $value = (isset($this->data[$field])) ? $this->data[$field] : $value;
         $r .= '<input type="hidden" value="'.$value.'" name="data['.$field.']" class="field text medium">';
         $r .= $this->getError($field);

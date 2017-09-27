@@ -23,8 +23,27 @@
 </head>
 <body>
 	<div class="container">
+		<style type="text/css">
+		.container{
+			padding-top: 100px;
+		}
+		</style>
 		<div class="row">
 			<div class="col-lg-12">
+
+				<form method="GET">
+					<label>Nombre d'article par page</label>
+					<select name="pp">
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+					<input type="hidden" name="p" value="<?= $current ?>">
+					<button class="btn btn-primary btn-xs" type="submit">Appliquer</button>
+				</form>
+
 				<div class="table-responsive">
 				  <table class="table">
 				    <thead>
@@ -52,7 +71,7 @@
 
 				<ul class="pagination">
 			    <li>
-			      <a class="<?php if($current == '1'){ echo "disabled";} ?>" href="?p=<?php if($current != '1'){echo $current-1;}else{ echo $current;} ?>" aria-label="Previous">
+			      <a class="<?php if($current == '1'){ echo "disabled";} ?>" href="?p=<?php if($current != '1'){echo $current-1;}else{ echo $current;} ?>&&pp=<?= $_GET['pp']; ?>" aria-label="Previous">
 			        <span aria-hidden="true">&laquo;</span>
 			      </a>
 			    </li>
@@ -61,18 +80,18 @@
 
 			    			if ($i == $current) {
 				    			?>
-				    				<li class="active"><a href="?p=<?= $i ?>"><?= $i ?></a></li>
+				    				<li class="active"><a href="?p=<?= $i ?>&&pp=<?= $_GET['pp']; ?>"><?= $i ?></a></li>
 				    		 	<?php
 			    			}else{
 			    				?>
-				    				<li><a href="?p=<?= $i ?>"><?= $i ?></a></li>
+				    				<li><a href="?p=<?= $i ?>&&pp=<?= $_GET['pp']; ?>"><?= $i ?></a></li>
 				    		 	<?php
 			    			}
 			    		 	
 			    		 } 
 			    	?>
 			    <li>
-			      <a class="<?php if($current == '1'){ echo "disabled";} ?>" href="?p=<?php if($current != $nbPage){echo $current+1;}else{ echo $nbPage;} ?>" aria-label="Previous">
+			      <a class="<?php if($current == '1'){ echo "disabled";} ?>" href="?p=<?php if($current != $nbPage){echo $current+1;}else{ echo $current;} ?>&&pp=<?= $_GET['pp']; ?>" aria-label="Previous">
 			        <span aria-hidden="true">&raquo;</span>
 			      </a>
 			    </li>
