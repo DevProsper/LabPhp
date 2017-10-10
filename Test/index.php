@@ -1,13 +1,9 @@
 <?php
-use App\App;
-use App\Autoloader;
-use App\Controller\AppController;
-require_once 'app/Autoloader.php';
-require_once 'Form.php';
-$form = Autoloader::register();
-
-$page = "users";
-$page = explode('.', $page);
-$controller = ucfirst("prosper") .'s' . 'Controller' . '.php';
-var_dump($controller);
+include 'includes.php';
+$form = new Forme("POST");
+echo $form->create("GET");
+echo $form->input("email");
+echo $form->submit('Envoyer');
+echo $form->end();
 ?>
+ 	

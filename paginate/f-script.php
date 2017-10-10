@@ -26,4 +26,3 @@ if (isset($_GET['p']) && !empty($_GET['p']) && ctype_digit($_GET['p']) == 1) {
 	$firstOpage = ($current-1)*$perPage;
 
 	$reqProduits = $db->query("SELECT * FROM produits ORDER BY id ASC LIMIT $firstOpage,$perPage");
-?>
