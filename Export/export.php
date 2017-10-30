@@ -17,14 +17,6 @@ try {
 $req = $db->prepare("SELECT id as Id,name as Nom,content as Contenu FROM posts");
 $req->execute();
 $data = $req->fetchAll();
-/*$datas = array();
-foreach ($data as $d) {
-	$datas[] = array(
-		'Titre' 	=> $d->id,
-		'Nom'		=> $d->name,
-		'Contenu'	=> $d->content
-	);
-}*/
 require 'class.csv.php';
 CSV::export($data, 'Export');
 ?>
