@@ -1,0 +1,61 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.search {
+  width: 100%;
+  position: relative
+}
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 21px;
+  outline: none;
+  color: #9DBFAF;
+}
+.searchTerm:focus{
+  color: #00B4CC;
+}
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 37px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 36%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search_box{
+  width: 102.2%;
+  background: #fff;
+}
+.search_box ul{
+  list-style: none;
+  padding: 0px;
+  width: 100%;
+  box-shadow: 0px 0px 4px 0px #00B4CC;
+  margin-left: 1px;
+}
+.search_box ul li{
+  padding: 5px 10px;
+  box-shadow: 0px 0px 1px 0px #00B4CC;
+}
+.search_box ul li:hover{
+  background: #E2FCFF;
+}
+.search_box ul li a{
+  text-decoration: none;
+}
