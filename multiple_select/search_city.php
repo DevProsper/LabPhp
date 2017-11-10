@@ -6,7 +6,7 @@ $result = $conn->query("SELECT * FROM city where state_id = '$id'");
 	
     if($result->num_rows > 0)
     {
-	echo '<option value="">---Select City---</option>';
+	echo '<option value="">---Selectionner la ville---</option>';
 
 	// Fetch the table data	
 	while ($row = $result->fetch_assoc()) 
@@ -16,6 +16,6 @@ $result = $conn->query("SELECT * FROM city where state_id = '$id'");
     }
     else
     {
-	echo '<option value="">---No City Found---</option>';
+	echo '<option value="">---Aucun résultat---</option>';
     }
 ?>

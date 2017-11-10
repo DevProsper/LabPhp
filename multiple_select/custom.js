@@ -9,7 +9,7 @@ $(document).ready(function(){
             async: false,
             success: function(data){
                 $('#state').html(data);
-                $('#city').html('<option value="">---Select City---</option>');
+                $('#city').html('<option value="">---Sélectionner la ville---</option>');
             }
         });
     });
