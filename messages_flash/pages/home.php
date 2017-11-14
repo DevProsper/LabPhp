@@ -1,3 +1,4 @@
+<?php ?>
 <div class="parallax-container">
 	<div class="parallax">
 		<img src="img/pros.jpg" alt="Prosper image bouton">
